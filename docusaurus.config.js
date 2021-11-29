@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Delphix',
+  tagline: 'Delphix Engine 6.0.11.0 Documentation',
+  url: 'https://manishagupta0303.github.io/documentation/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'manishagupta0303', // Usually your GitHub org/user name.
+  projectName: 'documentation', // Usually your repo name.
 
   presets: [
     [
@@ -24,7 +24,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          includeCurrentVersion:false,
+          editUrl: 'https://github.com/manishagupta0303/documentation/tree/main/docs/',
         },
         blog: {
           showReadingTime: true,
@@ -43,21 +44,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Delphix',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
+            type: 'docsVersionDropdown',
+          },
+          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          //{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/manishagupta0303/documentation/',
             label: 'GitHub',
             position: 'right',
           },
