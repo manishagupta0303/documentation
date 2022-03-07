@@ -1,7 +1,0 @@
-#
-# Copyright (c) 2021 by Delphix. All rights reserved.
-#
-mkdocs
-mkdocs-material
-markdown-include
-mkdocs-awesome-pages-plugin
