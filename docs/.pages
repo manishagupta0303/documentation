@@ -1,0 +1,7 @@
+arrange:
+  - index.md
+  - Release_Notes
+  - Limitations.md
+  - Getting_Started
+  - Configuration_Settings
+  - API_Reference

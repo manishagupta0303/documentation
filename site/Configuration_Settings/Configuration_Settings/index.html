@@ -1,0 +1,873 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Delphix Hyperscale Compliance feature.">
+      
+      
+        <meta name="author" content="Delphix">
+      
+      
+        <link rel="canonical" href="https://www.hyperscale-compliance.delphix.com/Configuration_Settings/Configuration_Settings/">
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Configuration Settings - Delphix Hyperscale Compliance Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,400i,700%7CConsolas&display=fallback">
+        <style>:root{--md-text-font:"Helvetica Neue";--md-code-font:"Consolas"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/delphix-brand.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration-settings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Delphix Hyperscale Compliance Documentation" class="md-header__button md-logo" aria-label="Delphix Hyperscale Compliance Documentation" data-md-component="logo">
+      
+  <img src="../../images/delphix-logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Delphix Hyperscale Compliance Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration Settings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Delphix Hyperscale Compliance Documentation" class="md-nav__button md-logo" aria-label="Delphix Hyperscale Compliance Documentation" data-md-component="logo">
+      
+  <img src="../../images/delphix-logo-white.png" alt="logo">
+
+    </a>
+    Delphix Hyperscale Compliance Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Release Notes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Release_Notes/About_This_Release/" class="md-nav__link">
+        About This Release
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Release_Notes/Known_Issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Limitations/" class="md-nav__link">
+        Limitations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Getting_Started/Support_Matrix/" class="md-nav__link">
+        Supported Platforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Getting_Started/Network_Requirements/" class="md-nav__link">
+        Network Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Getting_Started/Hyperscale_Compliance_Installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Getting_Started/NFS_Server_Installation/" class="md-nav__link">
+        NFS Server Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Getting_Started/Accessing_the_Hyperscale_Compliance_API/" class="md-nav__link">
+        Accessing the Hyperscale Compliance API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Configuration Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration Settings" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration Settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration Settings
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-change-the-hyperscale-properties" class="md-nav__link">
+    How to Change the Hyperscale Properties
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../API_Reference/Hyperscale_Compliance_API/" class="md-nav__link">
+        Hyperscale Compliance API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-change-the-hyperscale-properties" class="md-nav__link">
+    How to Change the Hyperscale Properties
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="configuration-settings">Configuration Settings</h1>
+<p>The following table lists the Hyperscale Compliance properties with their default values.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Property name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hyperscale</strong></td>
+<td>engines.certificate.path</td>
+<td>String</td>
+<td>Path of masking engine certificates</td>
+<td>/etc/config/cert</td>
+</tr>
+<tr>
+<td></td>
+<td>root.config.path</td>
+<td>String</td>
+<td>Root path which Hyperscale will be looking into for source files</td>
+<td>/etc/hyperscale</td>
+</tr>
+<tr>
+<td></td>
+<td>masking.file.formats</td>
+<td>String</td>
+<td>Path where Hyperscale will store masking file format files</td>
+<td>/masking-file-formats</td>
+</tr>
+<tr>
+<td></td>
+<td>splitted.files.dir</td>
+<td>String</td>
+<td>Path where Hyperscale will store splitted source files ]</td>
+<td>/splitted-files</td>
+</tr>
+<tr>
+<td></td>
+<td>target.dir</td>
+<td>String</td>
+<td>Path where Hyperscale will store masked files</td>
+<td>/tgt</td>
+</tr>
+<tr>
+<td></td>
+<td>staging.dir</td>
+<td>String</td>
+<td>Path where Hyperscale will store masked files for splitted source files (this is relevant only if file merging of masked files is set to true)</td>
+<td>/stg</td>
+</tr>
+<tr>
+<td></td>
+<td>remove.splitted.masked.files</td>
+<td>Boolean</td>
+<td>Flag to indicate retaining or removing staging splitted masked files</td>
+<td>true</td>
+</tr>
+<tr>
+<td></td>
+<td>monitor.initial.delay</td>
+<td>Integer</td>
+<td>Masking job monitor delay in seconds</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>monitor.poll.duration</td>
+<td>Integer</td>
+<td>Masking job monitoring duration in seconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td></td>
+<td>scheduler.poll.duration</td>
+<td>Integer</td>
+<td>Job scheduler poll duration in seconds</td>
+<td>60</td>
+</tr>
+<tr>
+<td></td>
+<td>intelligent.loadbalance.enabled</td>
+<td>Boolean</td>
+<td>Enable Intelligent load balancing/Round robin load balancing approach. By default, Intelligent load balancing is enabled</td>
+<td>true</td>
+</tr>
+<tr>
+<td></td>
+<td>job.monitor.pool.corePoolSize</td>
+<td>Integer</td>
+<td>Defines number of thread pools created for Masking Job Monitor service</td>
+<td>5</td>
+</tr>
+<tr>
+<td></td>
+<td>job.monitor.pool.maxPoolSize</td>
+<td>Integer</td>
+<td>Defines number of threads created in a pool for Masking Job Monitor service</td>
+<td>20</td>
+</tr>
+<tr>
+<td></td>
+<td>job.monitor.pool.keepAliveSeconds</td>
+<td>Integer</td>
+<td>Defines keep alive time in second for threads of Masking Job Monitor</td>
+<td>300</td>
+</tr>
+<tr>
+<td></td>
+<td>job.monitor.pool.queueCapacity</td>
+<td>Integer</td>
+<td>Defines maximum queue capacity of the pool</td>
+<td>50</td>
+</tr>
+<tr>
+<td></td>
+<td>job.monitor.pool.threadPrefix</td>
+<td>String</td>
+<td>Thread name prefix for Masking Job Monitor threads</td>
+<td>JobMonitorTaskExecutor</td>
+</tr>
+<tr>
+<td><strong>Spring Framework</strong></td>
+<td>logging.level.root</td>
+<td>String</td>
+<td>Root Log level</td>
+<td>WARN</td>
+</tr>
+<tr>
+<td></td>
+<td>logging.level.com.delphix.hyperscale</td>
+<td>String</td>
+<td>Custom log level for a package or class</td>
+<td>INFO</td>
+</tr>
+<tr>
+<td></td>
+<td>logging.file.name</td>
+<td>String</td>
+<td>Log file name/path</td>
+<td>/opt/delphix/logs/hyperscale.log</td>
+</tr>
+<tr>
+<td></td>
+<td>logging.pattern.file</td>
+<td>String</td>
+<td>Format of log entries</td>
+<td><code>%d{dd-MM-yyyy HH:mm:ss.SSS} \[%thread\] %-5level %logger{36}.%M - %msg%n</code></td>
+</tr>
+<tr>
+<td></td>
+<td>logging.pattern.rolling-file-name</td>
+<td>String</td>
+<td>Archive log file name/path</td>
+<td>/opt/delphix/logs/archived/hyperscale-%d{yyyy-MM-dd}.%i.log</td>
+</tr>
+<tr>
+<td></td>
+<td>logging.file.max-size</td>
+<td>String</td>
+<td>Maximum individual log file size before it will be archived (format 5MB, 100MB)</td>
+<td>5MB</td>
+</tr>
+<tr>
+<td></td>
+<td>logging.file.max-history</td>
+<td>integer</td>
+<td>History in days (i.e. keep 15 days&rsquo; worth of history capped at 5GB total size)</td>
+<td>15</td>
+</tr>
+<tr>
+<td></td>
+<td>logging.file.total-size-cap</td>
+<td>String</td>
+<td>Max total size that the archive folder can hold.</td>
+<td>5GB</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-change-the-hyperscale-properties">How to Change the Hyperscale Properties</h2>
+<p>You can set the above Hyperscale properties as environment variables in a Hyperscale Application Container using the ‘environment’ key inside the compose file i.e. docker-compose.yaml. You can locate the <code>docker-compose.yaml</code> file in the directory where the <code>delphix-hyperscale-masking-dev.tar.gz</code> is extracted.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must start or restart the container after overriding these properties in the <code>docker-compose.yaml</code> file.</p>
+</div>
+<p>The below file describes the content of the <code>docker-compose.yaml</code> file after updating the Hyperscale properties.</p>
+<div class="highlight"><pre><span></span><code>networks:
+  hyperscale-net: {}
+services:
+  hyperscale:
+    environment:
+      - API_KEY_CREATE=true
+      - ENGINES_CERTIFICATE_PATH=/etc/config/cert
+      - ROOT_CONFIG_PATH=/etc/hyperscale
+      - MASKING_FILE_FORMATS=/masking-file-formats
+      - SPLITTED_FILES_DIR=/splitted-files
+      - TARGET_DIR=/tgt
+      - STAGING_DIR=/stg
+      - REMOVE_SPLITTED_MASKED_FILES=true
+      - MONITOR_INITIAL_DELAY=1
+      - MONITOR_POLL_DURATION=10
+      - SCHEDULER_POLL_DURATION=60
+      - INTELLIGENT_LOADBALANCE_ENABLED=false
+    image: delphix-hyperscale-masking-app:1
+    init: true
+    networks:
+      hyperscale-net: null
+    restart: unless-stopped
+    volumes:
+      - hyperscale-data:/data:rw
+      - /home/delphix/hyperscale_logs:/opt/delphix/logs:rw
+      - /mnt/provision:/etc/hyperscale:rw
+  proxy:
+    depends_on:
+      hyperscale:
+        condition: service_started
+    image: delphix-hyperscale-masking-proxy:1
+    init: true
+    networks:
+      hyperscale-net: null
+    ports:
+      - published: 443
+        target: 443
+    restart: unless-stopped
+version: &#39;3.7&#39;
+volumes:
+  hyperscale-data: {}
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../Getting_Started/Accessing_the_Hyperscale_Compliance_API/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Accessing the Hyperscale Compliance API" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Accessing the Hyperscale Compliance API
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../API_Reference/Hyperscale_Compliance_API/" class="md-footer__link md-footer__link--next" aria-label="Next: Hyperscale Compliance API" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Hyperscale Compliance API
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018, 2022 Delphix Corp.
+          </div>
+        
+      </div>
+      <div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js", "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+    
+  </body>
+</html>
